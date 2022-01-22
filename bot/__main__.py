@@ -62,8 +62,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Report Group", "https://t.me/+MwgSi5vmQEA2N2Vk")
+    buttons.buildbutton("𝗣𝗥𝗜𝗠𝗘 𝗕𝗢𝗧𝗭", "https://t.me/Prime_BotZ")
+    buttons.buildbutton("𝗝𝗢𝗜𝗡", "https://t.me/+gIdmGevmKDk0MmU1")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
