@@ -39,16 +39,16 @@ def select_type(update, context):
         buttons.sbutton("ʙᴏᴛʜ", f"types {user_id} both {data[2]}")
         buttons.sbutton("ᴄᴀɴᴄᴇʟ", f"types {user_id} cancel")
         button = InlineKeyboardMarkup(buttons.build_menu(2))
-        editMessage('Choose option to list.', msg, button)
+        editMessage('𝐂𝐡𝐨𝐨𝐬𝐞 𝐨𝐩𝐭𝐢𝐨𝐧 𝐭𝐨 𝐥𝐢𝐬𝐭.', msg, button)
     elif data[2] in ["files", "folders", "both"]:
         query.answer()
         list_method = data[3]
         item_type = data[2]
-        editMessage(f"<b>Searching for <i>{key}</i></b>", msg)
+        editMessage(f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐟𝐨𝐫 <i>{key}</i></b>", msg)
         Thread(target=_list_drive, args=(key, msg, list_method, item_type)).start()
     else:
         query.answer()
-        editMessage("list has been canceled!", msg)
+        editMessage("𝐋𝐢𝐬𝐭 𝐡𝐚𝐬 𝐛𝐞𝐞𝐧 𝐜𝐚𝐧𝐜𝐞𝐥𝐞𝐝!", msg)
 
 def _list_drive(key, bmsg, list_method, item_type):
     LOGGER.info(f"listing: {key}")
@@ -58,7 +58,7 @@ def _list_drive(key, bmsg, list_method, item_type):
     if button:
         editMessage(msg, bmsg, button)
     else:
-        editMessage(f'No result found for <i>{key}</i>', bmsg)
+        editMessage(f'𝐍𝐨 𝐫𝐞𝐬𝐮𝐥𝐭 𝐟𝐨𝐮𝐧𝐝 𝐟𝐨𝐫 <i>{key}</i>', bmsg)
 
 list_handler = CommandHandler(BotCommands.ListCommand, list_buttons, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 list_type_handler = CallbackQueryHandler(select_type, pattern="types", run_async=True)
