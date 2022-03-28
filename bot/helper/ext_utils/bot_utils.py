@@ -125,8 +125,8 @@ def get_readable_message():
                 globals()['PAGE_NO'] -= 1
             START = COUNT
         for index, download in enumerate(list(download_dict.values())[START:], start=1):
-            msg += f"<b>▬▬▬▬▬  @PRIME_BOTZ ▬▬▬▬▬\n\n𝗙𝗶𝗹𝗲𝗻𝗮𝗺𝗲 :</b><code>{download.name()}</code>"
-            msg += f"\n<b>𝗦𝘁𝗮𝘁𝘂𝘀 :{download.status()}</b>"
+            msg += f"<b>▬▬▬▬▬  @PRIME_BOTZ ▬▬▬▬▬\n\n𝗙𝗶𝗹𝗲𝗻𝗮𝗺𝗲 :</b> <code>{download.name()}</code>"
+            msg += f"\n<b>𝗦𝘁𝗮𝘁𝘂𝘀 : {download.status()}</b>"
             if download.status() not in [
                 MirrorStatus.STATUS_ARCHIVING,
                 MirrorStatus.STATUS_EXTRACTING,
@@ -151,7 +151,7 @@ def get_readable_message():
                            f" | <b>𝗟𝗲𝗲𝗰𝗵𝗲𝗿𝘀 :</b> {download.torrent_info().num_leechs}"
                 except:
                     pass
-                msg += f"\n<b>𝗖𝗮𝗻𝗰𝗲𝗹 :</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n════════════════════════════════"
+                msg += f"\n<b>𝗖𝗮𝗻𝗰𝗲𝗹 :</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n════════════════════════════════"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>Size: </b>{download.size()}"
                 msg += f"\n<b>Speed: </b>{get_readable_file_size(download.torrent_info().upspeed)}/s"
