@@ -183,9 +183,9 @@ def get_readable_message():
         dlspeed = get_readable_file_size(dlspeed_bytes)
         ulspeed = get_readable_file_size(uldl_bytes)
         bmsg += f"\n<b>𝗥𝗔𝗠:</b> {virtual_memory().percent}% | <b>𝗨𝗣𝗧𝗜𝗠𝗘:</b> {currentTime}"
-        bmsg += f"\n<b>𝗗𝗟:</b> {dlspeed}/s | <b>𝗨𝗟:</b> {ulspeed}/s"
+        bmsg += f"\n<b>𝗗𝗟:</b> {dlspeed}/s🔻 | <b>𝗨𝗟:</b> {ulspeed}/s🔺"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
-            msg += f"<b>𝗣𝗮𝗴𝗲:</b> {PAGE_NO}/{pages} | <b>𝗧𝗮𝘀𝗸𝘀:</b> {tasks}\n"
+            msg += f"<b>📖 𝗣𝗮𝗴𝗲:</b> {PAGE_NO}/{pages} | <b>📝 𝗧𝗮𝘀𝗸𝘀:</b> {tasks}\n"
             buttons = ButtonMaker()
             buttons.sbutton("⬅️", "status pre")
             buttons.sbutton("➡️", "status nex")
