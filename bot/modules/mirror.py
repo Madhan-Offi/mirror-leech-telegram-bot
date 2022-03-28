@@ -235,7 +235,7 @@ class MirrorListener:
             if ospath.isdir(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
                 msg += f'\n<b>𝗦𝘂𝗯 𝗙𝗼𝗹𝗱𝗲𝗿𝘀: </b>{folders}'
                 msg += f'\n<b>𝗙𝗶𝗹𝗲𝘀: </b>{files}'
-            msg += f'\n\n<b>𝗰𝗰: </b>{self.tag}'
+            msg += f'\n\n<b>𝗥𝗲𝗾 𝗕𝘆: </b>{self.tag}'
             buttons = ButtonMaker()
             link = short_url(link)
             buttons.buildbutton("☁️ Drive Link", link)
