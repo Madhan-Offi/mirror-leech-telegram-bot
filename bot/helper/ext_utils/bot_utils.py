@@ -140,7 +140,7 @@ def get_readable_message():
                     msg += f"\n<b>𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                 else:
                     msg += f"\n<b>𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n<b>𝗦𝗽𝗲𝗲𝗱 :</b> {download.speed()} | <b>ETA:</b> {download.eta()}"
+                msg += f"\n<b>𝗦𝗽𝗲𝗲𝗱 :</b> {download.speed()} | <b>𝗘𝗧𝗔 :</b> {download.eta()}"
                 try:
                     msg += f"\n<b>𝗦𝗲𝗲𝗱𝗲𝗿𝘀 :</b> {download.aria_download().num_seeders}" \
                            f" | <b>𝗣𝗲𝗲𝗿𝘀 :</b> {download.aria_download().connections}"
