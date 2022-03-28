@@ -356,7 +356,7 @@ class GoogleDriveHelper:
                     LOGGER.info("Deleting cloned data from Drive...")
                     self.deletefile(durl)
                     return "your clone has been stopped and cloned data has been deleted!", "cancelled"
-                msg += f'<b>𝗡𝗮𝗺𝗲: </b><code>{meta.get("name")}</code>\n\n<b>Size: </b>{get_readable_file_size(self.transferred_size)}'
+                msg += f'<b>𝗡𝗮𝗺𝗲: </b> <code>{meta.get("name")}</code>\n\n<b>𝗦𝗶𝘇𝗲: </b>{get_readable_file_size(self.transferred_size)}'
                 msg += '\n\n<b>𝗧𝘆𝗽𝗲: </b>Folder'
                 msg += f'\n<b>𝗦𝘂𝗯𝗙𝗼𝗹𝗱𝗲𝗿𝘀: </b>{self.__total_folders}'
                 msg += f'\n<b>𝗙𝗶𝗹𝗲𝘀: </b>{self.__total_files}'
@@ -751,7 +751,7 @@ class GoogleDriveHelper:
             mime_type = meta.get('mimeType')
             if mime_type == self.__G_DRIVE_DIR_MIME_TYPE:
                 self.__gDrive_directory(meta)
-                msg += f'<b>𝗡𝗮𝗺𝗲: </b><code>{name}</code>'
+                msg += f'<b>𝗡𝗮𝗺𝗲: </b> <code>{name}</code>'
                 msg += f'\n\n<b>𝗦𝗶𝘇𝗲: </b>{get_readable_file_size(self.__total_bytes)}'
                 msg += '\n\n<b>𝗧𝘆𝗽𝗲: </b>Folder'
                 msg += f'\n<b>𝗦𝘂𝗯𝗙𝗼𝗹𝗱𝗲𝗿𝘀: </b>{self.__total_folders}'
